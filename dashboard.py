@@ -16,16 +16,16 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 # ouverture du csv en local
 
-df = pd.read_csv('indices_dept_et_regions.csv',
+df = pd.read_csv('data/indices_dept_et_regions.csv',
                                 sep=',',
                                 header='infer',
                                 quotechar='"',
                                 encoding='UTF-8',)
 
-# ouverture directement en raw sur github
+# ouverture directement en raw sur github (éventuellement)
 
 '''
-df = pd.read_csv('indices_dept_et_regions.csv',
+df = pd.read_csv('https://raw.githubusercontent.com/virgilus/indice_deserts_medicaux/master/data/indices_dept_et_regions.csv',
                                 sep=',',
                                 header='infer',
                                 quotechar='"',
@@ -98,7 +98,7 @@ app.layout = html.Div([
                    
                 ],
                 'layout': {
-                    'title': 'Indice par habitant',
+                    'title': "Contributions à l'indice par département",
                     'barmode': 'stack'
                 }
             }
@@ -128,7 +128,7 @@ app.layout = html.Div([
                    
                 ],
                 'layout': {
-                    'title': 'Indice par région',
+                    'title': "Contributions à l'indice par région",
                     'barmode': 'stack'
                 }
             }
